@@ -99,9 +99,7 @@ class ZKLib:
         """Checks a returned packet to see if it returned CMD_ACK_OK,
         indicating success"""
         command = unpack('HHHH', reply[:8])[0]
-	
         if command == CMD_ACK_OK:
-            print "CMD_ACK_OK"
             return True
         else:
             return False

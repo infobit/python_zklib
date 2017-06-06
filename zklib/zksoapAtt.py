@@ -26,7 +26,6 @@ def zksoapAtt(self):
 		container = tree.findall("Row")
 
 		for elem in container:
-
 			uid = elem.findtext("PIN")
 			DateTime = elem.findtext("DateTime")
 			ver = elem.findtext("Verified")
