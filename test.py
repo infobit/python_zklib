@@ -2,7 +2,7 @@ from zklib import zklib
 
 
 
-maquina = zklib.ZKLib(ip='10.0.8.11', port=4370)
+maquina = zklib.ZKLib(ip='192.168.188.202', port=4370)
 maquina.connect()
 
 

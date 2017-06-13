@@ -1,11 +1,11 @@
 import sys
 sys.path.append("zklib")
 
-import zklib
+from zklib import zklib
 import time
 import zkconst
 
-zk = zklib.ZKLib("192.168.1.201", 4370)
+zk = zklib.ZKLib("192.168.188.202", 4370)
 
 ret = zk.connect()
 print "connection:", ret
@@ -41,11 +41,11 @@ if ret == True:
                 level = 'User'
             print "[UID %d]: ID: %s, Name: %s, Level: %s, Password: %s" % (uid, data_user[uid][0], data_user[uid][1], level, data_user[uid][3])
 
-    # print "Clear Admin:", zk.clearAdmin()
-    #zk.setUser(uid=61, userid='41', name='Dony Wahyu Isp', password='123456', role=zkconst.LEVEL_ADMIN)
+    print "Clear Admin:", zk.clearAdmin()
+    zk.setUser(uid=61, userid='41', name='Dony Wahyu Isp', password='123456', role=zkconst.LEVEL_ADMIN)
 
     
-    attendance = zk.getsAtt('192.168.1.201')
+    attendance = zk.getsAtt('192.168.188.202')
     print "Get Attendance:"
 
     if (attendance):
